@@ -36,6 +36,8 @@ print(stockInfo['stockNameEng'])
 print(stockInfo['stockNameEng'])
 print(stockInfo['currencyType']['name'])
 print(stockInfo['stockItemTotalInfos'][1]['value'])
+print(stockInfo['fluctuationsRatio'])
+
 
 '''
 urllib -> infos from url, html 
