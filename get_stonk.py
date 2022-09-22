@@ -28,12 +28,14 @@ from urllib import parse
 from ast import literal_eval
 import requests
 
-def get_sise(ticker) :
-    url="https://api.stock.naver.com/stock/%s.O/basic"%(ticker)
-    response = requests.get(url)
-    return literal_eval(response.text.strip())
-    
-get_sise('ABNB')
+ticker = 'intc'
+
+page = requests.get("https://api.stock.naver.com/stock/%s.O/basic"%(ticker.upper()))
+stockInfo = page.json()
+print(stockInfo['stockNameEng'])
+print(stockInfo['stockNameEng'])
+print(stockInfo['currencyType']['name'])
+print(stockInfo['stockItemTotalInfos'][1]['value'])
 
 '''
 urllib -> infos from url, html 
