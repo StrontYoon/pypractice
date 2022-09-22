@@ -28,9 +28,9 @@ from urllib import parse
 from ast import literal_eval
 import requests
 
-ticker = 'intc'
+ticker = 'intc.o'
 
-page = requests.get("https://api.stock.naver.com/stock/%s.O/basic"%(ticker.upper()))
+page = requests.get("https://api.stock.naver.com/stock/%s/basic"%(ticker.upper()))
 stockInfo = page.json()
 print(stockInfo['stockNameEng'])
 print(stockInfo['stockNameEng'])
